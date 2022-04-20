@@ -1,0 +1,112 @@
+.creation{
+    margin-bottom: 50px;
+    & .mobile__a{
+        display: block;
+        margin: 0px auto;
+        width: fit-content;
+        color: $Black;
+        padding: 5px 10px;
+        border: 2px solid $Black;
+        font-weight: bold;
+        margin-top: 50px;
+
+        &:hover{
+            color: $White;
+            background-color: $Black;
+        }
+    }
+
+    & .our__creation h1{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    & .photo{
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+        &::after{
+            content: "";
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: linear-gradient(to right , $Black ,transparent);
+            width: 100%;
+            height: 96%;
+            
+        }
+        & img{
+            width: 100%;
+
+        }
+        & h3{
+            position: absolute;
+            left: 15px;
+            bottom: 15px;
+            width: 113px;
+            font-size: 22px;
+            color: $White;
+            z-index: 4;
+            font-weight: 100;
+        }
+    }
+    // desktop
+    .container{
+        @include breakpoint-up(large){
+          margin: 0px 100px;
+        }
+    }
+    .our__creation__d{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        & a{
+            color: $Black;
+            padding: 5px 10px;
+            border: 2px solid $Black;
+            font-weight: bold;
+            &:hover{
+                color: $White;
+                background-color: $Black;
+            }
+        }
+    }
+    & .main__div{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 40px;
+
+        & .photo__d{
+            position: relative;
+            & img{
+                width: 100%;
+            }
+            &::after{
+                content: "";
+                z-index: 1;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-image: linear-gradient(to top , $Black ,transparent);
+                width: 100%;
+                height: 100%;
+                
+            }
+            & h3{
+                position: absolute;
+                left: 15px;
+                bottom: 15px;
+                width: 75px;
+                font-size: 33px;
+                color: $White;
+                z-index: 4;
+                font-weight: 100;
+            }
+            
+
+        }
+        
+    }
+
+}

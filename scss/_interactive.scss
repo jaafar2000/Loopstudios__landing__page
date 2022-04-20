@@ -1,0 +1,81 @@
+.interactive{
+  max-height: 100vh;
+
+    margin-bottom: 50px;
+    // for large screen 
+    .container{
+        @include breakpoint-up(large){
+          margin: 0px 100px;
+          display: flex;
+          justify-content: flex-start;
+        }
+    }
+& .box{
+  position: relative;
+}
+    & .img{
+        background-image: url("../images/mobile/image-interactive.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 310px;
+        height: 226px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        @include breakpoint-up(medium){
+            background-image: url("../images/desktop/image-interactive.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            width : 735px;
+            margin-bottom: 50px;
+            margin-left: 0;
+            
+            
+          }
+    }
+    & .info__interactive{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+        @include breakpoint-up(large){
+            display: flex;
+            text-align: left;
+            justify-content: left;
+            align-items: flex-start;
+            width: 420px;
+            height: fit-content;
+            background-color: $White;
+            position: absolute;
+            left: 550px;
+            top: 267px;
+            padding-left: 70px;
+            padding-top: 41px;
+          }
+        }
+
+        & h1{
+          font-weight: 100;
+          margin-bottom: 11px;
+          color: black;
+          font-size: 30px;
+            @include breakpoint-up(large){
+                width: 320px;
+                font-size: 30px;
+              }
+        }
+        & p{
+            font-size: 18px;
+            font-weight: bold;
+            color: $Dark;
+            line-height: 1.5;
+            width: 80%;
+            @include breakpoint-up(large){
+                width: 420px;
+                font-size: 16px;
+              }
+        }
+    }

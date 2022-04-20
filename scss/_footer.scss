@@ -1,0 +1,117 @@
+footer{
+	background-color: $Black;
+	padding: 20px;
+
+	.container{
+		@include breakpoint-up(large){
+			margin: 0px 100px;
+		}
+}
+
+	& .footer__links{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		@include breakpoint-up(large){
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row;
+		}
+		& .r > img{
+			@include breakpoint-up(large){
+				margin-bottom: 5px;
+				margin-top: 18px;
+			}
+		}
+
+	  & .footer__menu{
+			ul{
+					@include breakpoint-up(large){
+						display: flex;
+						align-items: center;
+						flex-direction: row;
+						margin-top: 10px;
+
+			}
+			}
+		}
+
+		& img {
+				padding: 5px;
+
+		}
+		& li{
+			position: relative;
+			width: fit-content;
+	
+				& a{
+					color: $White;
+					margin-bottom: 10px;
+					padding: 5px;
+					display: block;
+					&:hover::after{
+					opacity: 1;
+				}
+					&::after{
+					content: "";
+					background-color: $White;
+					width: 60%;
+					height: 2px;
+					position: absolute;
+					bottom: 12px;
+					left: 50%;
+					transform: translateX(-50%);
+					transition: 300ms;
+					opacity: 0;
+				}
+	
+			}
+		}
+
+		& .icon a{
+			margin: 10px;
+	}
+	& p{
+		color: $White;
+		padding: 10px;
+		font-size: 15px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+}

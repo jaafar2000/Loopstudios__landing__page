@@ -1,0 +1,39 @@
+.hero{
+    margin-bottom: 50px;
+
+    .container{
+        @include breakpoint-up(large){
+          margin: 0px 100px;
+        }
+    }
+    background-image: url("../images/mobile/image-hero.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    @include breakpoint-up(large){
+        background-image: url("../images/desktop/image-hero.jpg");
+        background-size: cover;
+        height: 100vh;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: flex-start;
+    }
+    & .info{
+        & h1{
+            @include breakpoint-up(large){
+                width: 450px;
+                font-size: 50px;
+                font-weight: 100;
+            }
+            color: $White;
+            padding: 20px;
+            border: 3px solid $White;
+            
+        }
+    }
+}
